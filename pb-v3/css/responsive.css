@@ -1,0 +1,335 @@
+/* Планшеты, телефоны и доступность. Основные стили — в styles.css. */
+
+@media (max-width: 1150px) {
+    .wrap {
+        width: calc(100% - 64px);
+    }
+
+    .header {
+        gap: 20px;
+        padding-inline: 32px;
+    }
+
+    .desktop-nav {
+        gap: 15px;
+    }
+
+    .header .brand > span:last-child {
+        font-size: 0.75rem;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 5rem;
+    }
+
+    .split, .about, .process, .faq {
+        gap: 50px;
+    }
+
+    .principles {
+        gap: 28px;
+    }
+}
+
+@media (max-width: 950px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-button:not([hidden]) {
+        display: block;
+    }
+
+    /* Без JavaScript основная навигация остается доступной. */
+    html:not(.js-enabled) .header {
+        position: relative;
+        height: auto;
+        flex-wrap: wrap;
+        padding-block: 20px;
+    }
+
+    html:not(.js-enabled) .desktop-nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hero h1 {
+        font-size: 4.1rem;
+    }
+
+    .hero-image {
+        height: 540px;
+    }
+
+    .trust, .advantage-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .trust > span {
+        padding: 0;
+        border: 0;
+        text-align: left;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .principle-title {
+        font-size: clamp(1.5rem, 3vw, 2.1rem);
+    }
+
+    .footer-top, .footer-bottom {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 700px) {
+    html {
+        scroll-padding-top: 90px;
+    }
+
+    body:not(.legal-page) {
+        padding-bottom: calc(82px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .wrap {
+        width: calc(100% - 40px);
+    }
+
+    .section {
+        padding-block: 65px;
+    }
+
+    .header, .header.scrolled {
+        height: 80px;
+        gap: 8px;
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+    }
+
+    .header .brand {
+        flex-shrink: 1;
+        min-width: 0;
+        gap: 10px;
+    }
+
+    .monogram {
+        padding-right: 12px;
+        font-size: 2.1rem;
+    }
+
+    .header .brand > span:last-child {
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
+    }
+
+    .header .brand small {
+        font-size: 0.5rem;
+    }
+
+    .header-actions > .button {
+        display: none;
+    }
+
+    .hero, .split, .about, .process, .faq, .contacts {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 38px;
+    }
+
+    .hero {
+        padding-top: 35px;
+    }
+
+    .hero-copy {
+        padding-top: 0;
+    }
+
+    .hero h1 {
+        margin-bottom: 25px;
+        font-size: clamp(2.85rem, 12vw, 5.1rem);
+    }
+
+    .hero-lead {
+        font-size: 1rem;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+        gap: 16px;
+        margin-top: 27px;
+    }
+
+    .hero-caption {
+        padding-top: 32px;
+    }
+
+    .hero-image {
+        height: auto;
+        aspect-ratio: 1.1;
+    }
+
+    .hero-image .image-placeholder {
+        position: absolute;
+        inset: 0;
+    }
+
+    .hero-image figcaption {
+        padding-inline: 16px;
+    }
+
+    .eyebrow {
+        margin-bottom: 22px;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+    }
+
+    .intro h2 {
+        font-size: 2rem;
+    }
+
+    .section-heading {
+        display: block;
+        margin-bottom: 35px;
+    }
+
+    .section-heading > p {
+        margin-top: 22px;
+    }
+
+    .practice-row {
+        grid-template-columns: minmax(0, 1fr) 20px;
+        gap: 12px;
+        padding-block: 22px;
+    }
+
+    .practice-row h3 {
+        font-size: 1.5rem;
+    }
+
+    .practice-row p {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .practice-arrow {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .principles, .case-grid, .review-grid, .form-pair {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .principles {
+        margin-top: 40px;
+    }
+
+    .principle-title {
+        margin-bottom: 16px;
+        font-size: 1.7rem;
+    }
+
+    .about-mark, .about-brand {
+        min-height: 330px;
+    }
+
+    .about h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-monogram {
+        font-size: 6rem;
+    }
+
+    .case-grid, .review-grid {
+        gap: 34px;
+    }
+
+    .case .eyebrow {
+        margin-bottom: 22px;
+    }
+
+    .case-dialog {
+        padding: 35px 24px;
+    }
+
+    .advantage-grid {
+        gap: 30px 23px;
+        margin-top: 37px;
+    }
+
+    .advantage-grid h3 {
+        font-size: 0.875rem;
+        letter-spacing: 0.02em;
+    }
+
+    .contacts dl > div {
+        grid-template-columns: minmax(90px, 0.8fr) minmax(0, 1.2fr);
+    }
+
+    .footer-top, .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mobile-cta {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 35;
+        display: flex;
+        padding: 12px max(20px, env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left));
+        border-top: 1px solid var(--border);
+        background: #f8f7f3f5;
+        backdrop-filter: blur(12px);
+    }
+
+    .mobile-cta .button {
+        width: 100%;
+        min-height: 48px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .wrap {
+        width: calc(100% - 32px);
+    }
+
+    .header .brand > span:last-child {
+        font-size: 0.6875rem;
+    }
+
+    .hero-image figcaption span:first-child {
+        max-width: 175px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .mobile-cta {
+        position: static;
+    }
+
+    body:not(.legal-page) {
+        padding-bottom: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
